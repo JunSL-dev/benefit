@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Benefit</title>
+    <script rel="javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script><!-- jQuery -->
+    <script rel="javascript" src="./source/js/main.js"></script>
+    <link rel="stylesheet" href="./source/css/style.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <img class="logo" src="./source/img/logo.png"/>
+      <div class="btn-box">
+        <a class="btn">About Us</a>
+        <a class="btn">My Page</a>
+        <a class="btn">Contact Us</a>
+      </div>
+      <img class="background" src="./source/img/nav-background.png"/>
+    </div>
+    <div class="contents-box">
+      <div class="contents">
+        <div class="text-box">
+          <h1 class="title">잠깐 뭐 <span style="font-weight: 700;">잊으신 거</span> 없나요?</h1>
+          <h2 class="sub">당신이 모르는 복지 서비스, <span style="font-weight: 700;">베네<span style="color: #354593">핏</span></span>이 대신 찾아드립니다.</h2>
+        </div>
+        <form class="register">
+          <input name="id" id="id" placeholder="ID" type="text"/>
+          <input name="password" id="password" placeholder="PASSWORD" type="password"/>
+          <input name="confirm-password" id="confirm-password" placeholder="CONFIRM-PASSWORD" type="password"/>
+          <input name="name" id="name" placeholder="NAME" type="text"/>
+          <input name="birth" id="birth" placeholder="BIRTH" type="date"/>
+          <div class="sex-box">
+            <input id="man" value="man" name="sex" type="radio" />
+            <label for="man"><img class="active" src="./source/img/sex-m-a.png" /><img class="noactive" src="./source/img/sex-m.png" /></label>
+            <input id="girl" value="girl" name="sex" type="radio" />
+            <label for="girl"><img class="active" src="./source/img/sex-g-a.png" /><img class="noactive" src="./source/img/sex-g.png" /></label>
+          </div>
+          <input name="address" id="address" placeholder="ADDRESS" type="text"/>
+          <input placeholder="ECT" class="ect-btn" type="text" readonly/>
+          <input id="submit" value="REGISTER" type="submit"/>
+          <div class="background hidden">
+            <div class="popup">
+              <a class="close"><img src="./source/img/close.png"/></a>
+              <h1 class="title">특이 사항 <span style="font-weight: 100">선택</span></h1>
+              <div class="line"></div>
+              <div class="form1">
+                <div class="box">
+                  <input id="no" name="ect1" value="no" type="checkbox">
+                  <label for="no"><span>해당없음</span></label><br>
+                  <input id="aa" name="ect1" value="aa" type="checkbox">
+                  <label for="aa"><span>임산부</span></label><br>
+                  <input id="bb" name="ect1" value="bb" type="checkbox">
+                  <label for="bb"><span>장애</span></label><br>
+                </div>
+                <div class="box">
+                  <input id="cc" name="ect1" value="cc" type="checkbox">
+                  <label for="cc"><span>실업자</span></label><br>
+                  <input id="dd" name="ect1" value="dd" type="checkbox">
+                  <label for="dd"><span>국가 유공자</span></label><br>
+                </div>
+              </div>
+              <div class="form2 hidden">
+                <div class="box">
+                  <input id="a" name="ect2" value="a" type="checkbox">
+                  <label for="a"><span>지체</span></label><br>
+                  <input id="b" name="ect2" value="b" type="checkbox">
+                  <label for="b"><span>언어</span></label><br>
+                  <input id="c" name="ect2" value="c" type="checkbox">
+                  <label for="c"><span>자폐성</span></label><br>
+                  <input id="d" name="ect2" value="d" type="checkbox">
+                  <label for="d"><span>심장</span></label><br>
+                  <input id="e" name="ect2" value="e" type="checkbox">
+                  <label for="e"><span>안면</span></label><br>
+                </div>
+                <div class="box">
+                  <input id="f" name="ect2" value="f" type="checkbox">
+                  <label for="f"><span>시각</span></label><br>
+                  <input id="g" name="ect2" value="g" type="checkbox">
+                  <label for="g"><span>지적</span></label><br>
+                  <input id="h" name="ect2" value="h" type="checkbox">
+                  <label for="h"><span>정신</span></label><br>
+                  <input id="i" name="ect2" value="i" type="checkbox">
+                  <label for="i"><span>호흡기</span></label><br>
+                  <input id="j" name="ect2" value="j" type="checkbox">
+                  <label for="j"><span>장루</span></label><br>
+                </div>
+                <div class="box">
+                  <input id="k" name="ect2" value="k" type="checkbox">
+                  <label for="k"><span>청각</span></label><br>
+                  <input id="l" name="ect2" value="l" type="checkbox">
+                  <label for="l"><span>뇌병변</span></label><br>
+                  <input id="m" name="ect2" value="m" type="checkbox">
+                  <label for="m"><span>신장</span></label><br>
+                  <input id="n" name="ect2" value="n" type="checkbox">
+                  <label for="n"><span>간</span></label><br>
+                  <input id="o" name="ect2" value="o" type="checkbox">
+                  <label for="o"><span>간질</span></label><br>
+                </div>
+              </div>
+              <div class="form3">
+                <span id="a" class="grade hidden">
+                  <span class="name">지체</span>
+                  <select name="grade-a">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="b" class="grade hidden">
+                  <span class="name">언어</span>
+                  <select name="grade-b">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="c" class="grade hidden">
+                  <span class="name">자폐성</span>
+                  <select name="grade-c">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="d" class="grade hidden">
+                  <span class="name">심장</span>
+                  <select name="grade-d">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="e" class="grade hidden">
+                  <span class="name">안면</span>
+                  <select name="grade-e">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="f" class="grade hidden">
+                  <span class="name">시각</span>
+                  <select name="grade-f">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="g" class="grade hidden">
+                  <span class="name">지적</span>
+                  <select name="grade-g">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="h" class="grade hidden">
+                  <span class="name">정신</span>
+                  <select name="grade-h">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="i" class="grade hidden">
+                  <span class="name">호흡기</span>
+                  <select name="grade-i">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="j" class="grade hidden">
+                  <span class="name">장루</span>
+                  <select name="grade-j">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="k" class="grade hidden">
+                  <span class="name">청각</span>
+                  <select name="grade-k">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="l" class="grade hidden">
+                  <span class="name">뇌병변</span>
+                  <select name="grade-l">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="m" class="grade hidden">
+                  <span class="name">신장</span>
+                  <select name="grade-m">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="n" class="grade hidden">
+                  <span class="name">간</span>
+                  <select name="grade-n">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+                <span id="o" class="grade hidden">
+                  <span class="name">간질</span>
+                  <select name="grade-o">
+                    <option value="1">1급</option>
+                    <option value="2">2급</option>
+                    <option value="3">3급</option>
+                    <option value="4">4급</option>
+                    <option value="5">5급</option>
+                    <option value="6">6급</option>
+                  </select>
+                </span>
+              </div>
+              <a class="btn-close">CONFIRM</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

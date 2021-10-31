@@ -1,0 +1,475 @@
+/* 폰트 */
+@font-face {
+  font-family: 'Kopub Light';
+  src: url('../font/KoPub Dotum Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Kopub Medium';
+  src: url('../font/KoPub Dotum Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Kopub Bold';
+  src: url('../font/KoPub Dotum Bold.ttf') format('truetype');
+}
+
+::selection {
+  background-color: #424242;
+  color: #fff;
+}
+::-moz-selection {
+  background-color: #424242;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+html {
+  font-family: 'Kopub Light', 'Sans-serif'!important;
+}
+body {
+  margin: 0;
+}
+input:focus {
+  outline:none;
+}
+/*Desktop & Mobile*/
+.hidden {
+  display: none!important;
+}
+/* navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 94px;
+  background-color: #fff;
+  box-shadow: 0px 4.5px 6.5px 0 rgba(0, 0, 0, 0.13);
+  z-index: 2;
+}
+.navbar .logo {
+  width: 105px;
+  margin-left: 52px;
+}
+.navbar .btn-box {
+  margin-left: 50px;
+}
+.navbar .btn-box .btn {
+  font-size: 13.5px;
+  margin-left: 14px;
+}
+.navbar .background {
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.navbar .login_state {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 3px 25px 3px 8px;
+  background-color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  right: 50px;
+  z-index: 3;
+}
+.navbar .login_state img {
+  width: 29px;
+  height: 29px;
+  margin-right: 11px;
+}
+.navbar .login_state .name {
+  margin-right: 12px;
+}
+.navbar .login_state .signout {
+  margin-left: 12px;
+}
+
+/* register */
+.contents-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 94px;
+  box-sizing: border-box
+}
+.contents-box .contents {
+  width: 520px;
+}
+.contents-box .contents .text-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contents-box .contents .text-box .title {
+  font-family: 'Kopub Light';
+  font-weight: 100;
+  font-size: 28px;
+  letter-spacing: 9.2px;
+  margin-bottom: 14px;
+}
+.contents-box .contents .text-box .sub {
+  font-family: 'Kopub Light';
+  font-weight: 200;
+  font-size: 14px;
+  letter-spacing: 3.2px;
+}
+.contents-box .contents form.register input[type="text"], .contents-box .contents form.register input[type="password"], .contents-box .contents form.register input[type="date"] {
+  font-family: 'Kopub Light';
+  letter-spacing: 3px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: 0;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid #aaa;
+  box-sizing: border-box;
+  transform: .5s ease;
+}
+.contents-box .contents form.register input[type="password"] {
+  width: 49.5%;
+}
+.contents-box .contents form.register input#name {
+  width: 49.5%;
+}
+.contents-box .contents form.register input#birth {
+  width: 38%;
+}
+.contents-box .contents form.register input:focus {
+  border-color: #354593;
+}
+.contents-box .contents form.register input[name="sex"] {
+  display: none;
+}
+.contents-box .contents form.register input[name="sex"] + label img {
+  width: 15px;
+  margin-left: 7px;
+}
+.contents-box .contents form.register input[name="sex"] + label img.active {
+  display: none;
+}
+.contents-box .contents form.register input[name="sex"]:checked + label img.noactive {
+  display: none;
+}
+.contents-box .contents form.register input[name="sex"]:checked + label img.active {
+  display: inline-block;
+}
+.contents-box .contents form.register .sex-box {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  float: right;
+}
+.contents-box .contents form.register .ect-btn {
+  cursor: pointer;
+}
+.contents-box .contents form.register select#ect {
+  font-family: 'Kopub Light';
+  letter-spacing: 3px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: 0;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid #aaa;
+  box-sizing: border-box;
+  transform: .5s ease;
+}
+.contents-box .contents form.register select#ect:focus {
+  outline: none;
+}
+.contents-box .contents form.register input[type="submit"] {
+  width: 140px;
+  height: 45px;
+  border-radius: 40px;
+  border: 1px solid #354593;
+  background-color: #fff;
+  color: #354593;
+  transition: .3s ease;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+}
+.contents-box .contents form.register input[type="submit"]:hover {
+  background-color: #354593;
+  color: #fff;
+}
+/*popup*/
+.contents-box .contents form.register .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.contents-box .contents form.register .background .popup {
+  font-size: 13px;
+  position: relative;
+  width: 36%;
+  background-color: #fff;
+  box-shadow: 0px 4.5px 25.5px 0 rgba(0, 0, 0, 0.13);
+  box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;
+}
+.contents-box .contents form.register .background .popup .close {
+  position: absolute;
+  right: 8px;
+  top: 14px;
+  width: 20px;
+}
+.contents-box .contents form.register .background .popup .close img {
+  width: 15px;
+}
+.contents-box .contents form.register .background .popup .title {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.contents-box .contents form.register .background .popup .line {
+  width: 100%;
+  height: 1.5px;
+  background-color: #aaa;
+  margin-bottom: 30px;
+}
+.contents-box .contents form.register .background .popup .form1 {
+  display: flex;
+  width: 88%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #aaa;
+  margin-bottom: 25px;
+}
+.contents-box .contents form.register .background .popup .form2 {
+  display: flex;
+  width: 88%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #aaa;
+  margin-bottom: 25px;
+}
+.contents-box .contents form.register .background .popup .form3 {
+  display: flex;
+  width: 88%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 7px;
+}
+.contents-box .contents form.register .background .popup .form1 .box {
+  flex: 1;
+}
+.contents-box .contents form.register .background .popup .form1 .box input {
+  margin-bottom: 15px;
+}
+.contents-box .contents form.register .background .popup .form2 .box {
+  flex: 1;
+}
+.contents-box .contents form.register .background .popup .form2 .box input {
+  margin-bottom: 15px;
+}
+.contents-box .contents form.register .background .popup .form3 .grade {
+  margin-right: 18px;
+  margin-bottom: 8px;
+}
+.contents-box .contents form.register .background .popup .form3 .grade .name {
+  margin-right: 2px;
+}
+.contents-box .contents form.register .background .popup .form3 .grade select {
+  font-size: 9px;
+  height: 16px;
+}
+.contents-box .contents form.register .background .popup a.btn-close {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #354593;
+  color: #354593;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-right: 20px;
+  float: right;
+  transition: .3s ease;
+  cursor: pointer;
+}
+.contents-box .contents form.register .background .popup a.btn-close:hover {
+  color: #fff;
+  background-color: #354593;
+}
+
+/*login*/
+.contents-box .contents form.login {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.contents-box .contents form.login input[type="text"], .contents-box .contents form.login input[type="password"] {
+  font-family: 'Kopub Light';
+  letter-spacing: 3px;
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: 0;
+  margin-bottom: 20px;
+  border-bottom: 1.5px solid #aaa;
+  box-sizing: border-box;
+  transform: .5s ease;
+}
+.contents-box .contents form.login input:focus {
+  border-color: #354593;
+}
+.contents-box .contents form.login .bottom {
+  display: flex;
+  width: 100%;
+}
+.contents-box .contents form.login .bottom .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+}
+.contents-box .contents form.login .bottom .box a {
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+.contents-box .contents form.login .bottom input[type="submit"] {
+  flex: 1;
+  width: 140px;
+  height: 45px;
+  border-radius: 40px;
+  border: 1px solid #354593;
+  background-color: #fff;
+  color: #354593;
+  transition: .3s ease;
+  cursor: pointer;
+  float: right;
+  box-sizing: border-box;
+}
+.contents-box .contents form.login .bottom input[type="submit"]:hover {
+  color: #fff;
+  background-color: #354593;
+}
+
+/* main */
+.main-box {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-top: 94px;
+}
+.main-box .header {
+  width: 100%;
+  height: 200px;
+  background-image: url('../img/header-background.png');
+  background-position: center;
+  background-size: cover;
+  margin-top: 35px;
+}
+.main-box .text {
+  font-size: 18px;
+  width: 100%;
+  font-weight: 100;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 30px;
+  line-height: 160%;
+}
+.main-box .bottom-box {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 40px;
+}
+.main-box .bottom-box .title {
+  font-size: 25px;
+  font-weight: 100;
+  margin-bottom: 35px;
+}
+.main-box .bottom-box .scroll-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 44px;
+  height: 44px;
+  animation-duration: 2s;
+  animation-name: ani;
+  animation-iteration-count: infinite;
+  color: #fff;
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+.result {
+  width: 55%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.result .item {
+  width: 100%;
+  margin-bottom: 34px;
+}
+.result .item .title-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+  padding: 7px;
+  margin-bottom: 23px;
+}
+.result .item .title-box .icon {
+  width: 32px;
+}
+.result .item .title-box .title {
+  font-size: 20px;
+  margin-left: 6px;
+}
+.result .item ul {
+  padding-left: 60px;
+}
+.result .item ul li {
+  letter-spacing: 2.8px;
+  margin-bottom: 17px;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*Desktop*/
+@media (min-width : 1025px) {
+
+}
+
+/*
+  mm       mm
+  mmm     mmm
+  mmmm   mmmm
+  mm mm mm mm
+  mm  mmm  mm
+  mm  mm   mm
+*/
+/*Mobile*/
+@media (max-width : 1024px) {
+
+}

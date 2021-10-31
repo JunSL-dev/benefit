@@ -1,0 +1,455 @@
+doctype html
+html(lang='en', dir='ltr')
+    head
+        meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        |     
+        title Benefit
+        |     
+        script(rel='javascript', src='https://code.jquery.com/jquery-3.3.1.min.js')
+        // jQuery
+        script(rel='javascript', src='js/main.js')
+        |     
+        link(rel='stylesheet', href='css/style.css')
+    |   
+    body
+        .navbar
+            a(href='/login')
+                img.logo(src='img/logo.png')
+            |       
+            .btn-box
+                a.btn About Us
+                |         
+                a.btn My Page
+                |         
+                a.btn Contact Us
+            |       
+            img.background(src='img/nav-background.png')
+        |     
+        .contents-box
+            .contents
+                .text-box
+                    h1.title
+                        | 잠깐 뭐 
+                        span(style='font-weight: 700;') 잊으신 거
+                        |  없나요?
+                    |           
+                    h2.sub
+                        | 당신이 모르는 복지 서비스, 
+                        span(style='font-weight: 700;')
+                            | 베네
+                            span(style='color: #354593') 핏
+                        | 이 대신 찾아드립니다.
+                |         
+                form.register(action='/register' method='post')
+                    input#id(name='userId', placeholder='ID', type='text')
+                    |           
+                    input#password(name='password', placeholder='PASSWORD', type='password')
+                    |           
+                    input#confirm-password(name='confirm_password', placeholder='CONFIRM-PASSWORD', type='password')
+                    |           
+                    input#name(name='name', placeholder='NAME', type='text')
+                    |           
+                    input#birth(name='age', placeholder='BIRTH', type='date')
+                    |           
+                    .sex-box
+                        input#man(value='m', name='sex', type='radio')
+                        |             
+                        label(for='man')
+                            img.active(src='img/sex-m-a.png')
+                            img.noactive(src='img/sex-m.png')
+                        |             
+                        input#girl(value='f', name='sex', type='radio')
+                        |             
+                        label(for='girl')
+                            img.active(src='img/sex-g-a.png')
+                            img.noactive(src='img/sex-g.png')
+                    |           
+                    input#address(name='address', placeholder='ADDRESS', type='text')
+                    |           
+                    input.ect-btn(placeholder='ECT', type='text', readonly='')
+                    |           
+                    input#submit(value='REGISTER', type='submit')
+                    |           
+                    .background.hidden
+                        .popup
+                            a.close
+                                img(src='img/close.png')
+                            |               
+                            h1.title
+                                | 특이 사항 
+                                span(style='font-weight: 100') 선택
+                            |               
+                            .line
+                            |               
+                            .form1
+                                .box
+                                    input#no(name='ect1', value='001', type='checkbox')
+                                    |                   
+                                    label(for='no')
+                                        span 해당없음
+                                    br
+                                    |                   
+                                    input#aa(name='ect1', value='003', type='checkbox')
+                                    |                   
+                                    label(for='aa')
+                                        span 임산부
+                                    br
+                                    |                   
+                                    input#bb(name='ect1', value='004', type='checkbox')
+                                    |                   
+                                    label(for='bb')
+                                        span 장애
+                                    br
+                                |                 
+                                .box
+                                    input#cc(name='ect1', value='006', type='checkbox')
+                                    |                   
+                                    label(for='cc')
+                                        span 실업자
+                                    br
+                                    |                   
+                                    input#dd(name='ect1', value='005', type='checkbox')
+                                    |                   
+                                    label(for='dd')
+                                        span 국가 유공자
+                                    br
+                            |               
+                            .form2.hidden
+                                .box
+                                    input#a(name='ect2', value='10', type='checkbox')
+                                    |                   
+                                    label(for='a')
+                                        span 지체
+                                    br
+                                    |                   
+                                    input#b(name='ect2', value='40', type='checkbox')
+                                    |                   
+                                    label(for='b')
+                                        span 언어
+                                    br
+                                    |                   
+                                    input#c(name='ect2', value='70', type='checkbox')
+                                    |                   
+                                    label(for='c')
+                                        span 자폐성
+                                    br
+                                    |                   
+                                    input#d(name='ect2', value='90', type='checkbox')
+                                    |                   
+                                    label(for='d')
+                                        span 신장
+                                    br
+                                    |                   
+                                    input#e(name='ect2', value='D0', type='checkbox')
+                                    |                   
+                                    label(for='e')
+                                        span 안면
+                                    br
+                                |                 
+                                .box
+                                    input#f(name='ect2', value='20', type='checkbox')
+                                    |                   
+                                    label(for='f')
+                                        span 시각
+                                    br
+                                    |                   
+                                    input#g(name='ect2', value='50', type='checkbox')
+                                    |                   
+                                    label(for='g')
+                                        span 지적
+                                    br
+                                    |                   
+                                    input#h(name='ect2', value='80', type='checkbox')
+                                    |                   
+                                    label(for='h')
+                                        span 정신
+                                    br
+                                    |                   
+                                    input#i(name='ect2', value='B0', type='checkbox')
+                                    |                   
+                                    label(for='i')
+                                        span 호흡기
+                                    br
+                                    |                   
+                                    input#j(name='ect2', value='E0', type='checkbox')
+                                    |                   
+                                    label(for='j')
+                                        span 장루
+                                    br
+                                |                 
+                                .box
+                                    input#k(name='ect2', value='30', type='checkbox')
+                                    |                   
+                                    label(for='k')
+                                        span 청각
+                                    br
+                                    |                   
+                                    input#l(name='ect2', value='60', type='checkbox')
+                                    |                   
+                                    label(for='l')
+                                        span 뇌병변
+                                    br
+                                    |                   
+                                    input#m(name='ect2', value='A0', type='checkbox')
+                                    |                   
+                                    label(for='m')
+                                        span 심장
+                                    br
+                                    |                   
+                                    input#n(name='ect2', value='C0', type='checkbox')
+                                    |                   
+                                    label(for='n')
+                                        span 간
+                                    br
+                                    |                   
+                                    input#o(name='ect2', value='F0', type='checkbox')
+                                    |                   
+                                    label(for='o')
+                                        span 간질
+                                    br
+                            |               
+                            .form3
+                                span#a.grade.hidden
+                                    span.name 지체
+                                    |                   
+                                    select(name='grade-a')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#b.grade.hidden
+                                    span.name 언어
+                                    |                   
+                                    select(name='grade-b')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#c.grade.hidden
+                                    span.name 자폐성
+                                    |                   
+                                    select(name='grade-c')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#d.grade.hidden
+                                    span.name 심장
+                                    |                   
+                                    select(name='grade-d')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#e.grade.hidden
+                                    span.name 안면
+                                    |                   
+                                    select(name='grade-e')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#f.grade.hidden
+                                    span.name 시각
+                                    |                   
+                                    select(name='grade-f')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#g.grade.hidden
+                                    span.name 지적
+                                    |                   
+                                    select(name='grade-g')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#h.grade.hidden
+                                    span.name 정신
+                                    |                   
+                                    select(name='grade-h')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#i.grade.hidden
+                                    span.name 호흡기
+                                    |                   
+                                    select(name='grade-i')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#j.grade.hidden
+                                    span.name 장루
+                                    |                   
+                                    select(name='grade-j')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#k.grade.hidden
+                                    span.name 청각
+                                    |                   
+                                    select(name='grade-k')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#l.grade.hidden
+                                    span.name 뇌병변
+                                    |                   
+                                    select(name='grade-l')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#m.grade.hidden
+                                    span.name 신장
+                                    |                   
+                                    select(name='grade-m')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#n.grade.hidden
+                                    span.name 간
+                                    |                   
+                                    select(name='grade-n')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                                |                 
+                                span#o.grade.hidden
+                                    span.name 간질
+                                    |                   
+                                    select(name='grade-o')
+                                        option(value='1') 1급
+                                        |                     
+                                        option(value='2') 2급
+                                        |                     
+                                        option(value='3') 3급
+                                        |                     
+                                        option(value='4') 4급
+                                        |                     
+                                        option(value='5') 5급
+                                        |                     
+                                        option(value='6') 6급
+                            |               
+                            a.btn-close CONFIRM
+if password
+    script.
+        alert("dupl")

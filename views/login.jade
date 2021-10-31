@@ -1,0 +1,57 @@
+doctype html
+html(lang='en', dir='ltr')
+    head
+        meta(charset='utf-8', name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+        |     
+        title Benefit
+        |     
+        script(rel='javascript', src='https://code.jquery.com/jquery-3.3.1.min.js')
+        // jQuery
+        script(rel='javascript', src='js/main.js')
+        |     
+        link(rel='stylesheet', href='css/style.css')
+    |   
+    body
+        .navbar
+            a(href='/login')
+                img.logo(src='img/logo.png')
+            |       
+            .btn-box
+                a.btn About Us
+                |         
+                a.btn My Page
+                |         
+                a.btn Contact Us
+            |       
+            img.background(src='img/nav-background.png')
+        |     
+        .contents-box
+            .contents
+                .text-box
+                    h1.title
+                        | 잠깐 뭐 
+                        span(style='font-weight: 700;') 잊으신 거
+                        |  없나요?
+                    |           
+                    h2.sub
+                        | 당신이 모르는 복지 서비스, 
+                        span(style='font-weight: 700;')
+                            | 베네
+                            span(style='color: #354593') 핏
+                        | 이 대신 찾아드립니다.
+                |         
+                form.login(action='/login' method='post')
+                    input#id(name='userId', placeholder='ID', type='text')
+                    |           
+                    input#password(name='password', placeholder='PASSWORD', type='password')
+                    |           
+                    .bottom
+                        .box
+                            a(style='color: #354593', href='/register') 회원가입
+                            |               
+                            a 비밀번호/아이디 찾기
+                        |             
+                        input(type='submit', value='LOG IN')
+if login
+    script.
+        alert("잘못된 아이디 혹은 비밀번호 입니다!")
